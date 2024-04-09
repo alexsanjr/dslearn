@@ -52,8 +52,8 @@ public class Topic {
     private Reply answer;
 
     @ManyToMany
-    @JoinTable(name = "tb_reply_likes",
-            joinColumns = @JoinColumn(name = "reply_id"),
+    @JoinTable(name = "tb_topic_likes",
+            joinColumns = @JoinColumn(name = "topic_id"),
             inverseJoinColumns = @JoinColumn(name = "user_id")
     )
     private Set<User> likes = new HashSet<>();
